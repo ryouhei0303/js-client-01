@@ -6,21 +6,38 @@
 </head>
 <body>
     <h1>置換マシン</h1>
+
     <div>
+ 
         <!-- textarea -->
         <textarea id="tarea" cols="60" rows="5">
-            我輩花子である。名前はまだない。どこで生まれたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。
+            我輩はネコである。名前はまだない。どこで生まれたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。
         </textarea>
     </div>
 
     <!-- input 2つ -->
     <input type="text" id="input1">
     <input type="text" id="input2">
+
     <!-- button -->
     <button id="btn">置換</button>
 
     <!-- p -->
     <p id="result">結果表示</p>
+
+    <p>ボタンをクリックすると、指定の文字列で置換されます。</p>
+    <p>リプレイス　メソッドは、文字列を置換するメソッドです。</p>
+    <button onclick="strFunction01()">replaceの実行</button>
+    <p id="sample1"></p>
+    <script>
+    function strFunction01() {
+    var strObj = "replace メソッドは、文字列を置換するメソッドです。";
+    var result = strObj.replace("メソッド", "method");
+    document.getElementById("sample1").innerHTML = result;
+    }
+    </script>
+
     <script src="index.js"></script>
+    
 </body>
 </html>
